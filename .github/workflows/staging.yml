@@ -48,7 +48,7 @@ jobs:
           key: ${{ secrets.SSH_PEM }}
           port: 22
           script: |
-            # cd react-app
+            cd react-app
             npm install
       - name: Notify on Success
         if: success()
