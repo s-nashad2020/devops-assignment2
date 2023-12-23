@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  backend:
+    container_name: backend
+    build: .
+    ports:
+      - 3000:3000
+    command: npx nodemon index.js
+    volumes:
+      - ./App:/App
+
+  frontend:
+    container_name: frontend
+    build: .
+    ports:
+      - 443:3000
+    command: npm start
+    volumes:
+      - ./App:/App
